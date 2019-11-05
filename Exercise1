@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class Exercise1 {
+	public static void main(String[] args) {
+		Random rand = new Random();
+		int randomNumber = 1;
+		int i = 1;
+		
+		while (randomNumber != 13) {
+		    randomNumber = rand.nextInt(15) + 11; //Random number between 11 and 25 (inclusive) 
+		    if (randomNumber == 19) { //If the number 19 is generated print two octothorps (##)
+		        System.out.print("## ");
+		    } else if (randomNumber == 13) { //if the number 13 is generated exit out of loop and print "all done"
+		        break;
+		    } else System.out.print(randomNumber + " "); //for other numbers print number
+		    
+		    if (i % 5 == 0) {
+                System.out.println(""); //Print no more than 5 numbers in a single line
+            }
+            i++;
+		} 
+		System.out.print("all done");
+		
+	}
+}
