@@ -1,0 +1,25 @@
+public class Exercise3 {
+	public static void main(String[] args) {
+	    int i;
+	    
+	    for (i = 20; i <= 50; i++) {
+	        if (i % 2 ==0) { //Even number can be divided exactly by 2
+	            System.out.println(i + "...even");
+	        } else if (isPrime(i)) {
+	            System.out.println(i + "...prime number");
+	        } else System.out.println(i + "...");
+	    }
+	}
+	
+	//checking if a number is Prime 
+	public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false; 
+        }
+        for (int i = 2; i < n; i++) { //A prime number is a whole number greater than 1 that can only be divided by itself and 1
+            if (n % i == 0) {
+                return false; 
+            }
+        } return true; 
+	}
+}
